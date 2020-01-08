@@ -28,167 +28,167 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.listBoxTST = new System.Windows.Forms.ListBox();
+            this.listBoxTSTVal = new System.Windows.Forms.ListBox();
+            this.labelTST = new System.Windows.Forms.Label();
+            this.labelTSTVal = new System.Windows.Forms.Label();
+            this.btnWczytajTestowy = new System.Windows.Forms.Button();
+            this.btnWczytajTreningowy = new System.Windows.Forms.Button();
+            this.btnWczytajWalidacyjny = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnGeneruj = new System.Windows.Forms.Button();
+            this.cBoxK = new System.Windows.Forms.ComboBox();
+            this.labelCBoxK = new System.Windows.Forms.Label();
+            this.labelCBoxMetryka = new System.Windows.Forms.Label();
+            this.cBoxMetryka = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // listBoxTST
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(82, 88);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 0;
+            this.listBoxTST.FormattingEnabled = true;
+            this.listBoxTST.Location = new System.Drawing.Point(27, 47);
+            this.listBoxTST.Name = "listBoxTST";
+            this.listBoxTST.Size = new System.Drawing.Size(120, 329);
+            this.listBoxTST.TabIndex = 0;
             // 
-            // listBox2
+            // listBoxTSTVal
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(355, 97);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 95);
-            this.listBox2.TabIndex = 1;
+            this.listBoxTSTVal.FormattingEnabled = true;
+            this.listBoxTSTVal.Location = new System.Drawing.Point(195, 47);
+            this.listBoxTSTVal.Name = "listBoxTSTVal";
+            this.listBoxTSTVal.Size = new System.Drawing.Size(120, 329);
+            this.listBoxTSTVal.TabIndex = 1;
             // 
-            // label1
+            // labelTST
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.labelTST.AutoSize = true;
+            this.labelTST.Location = new System.Drawing.Point(24, 31);
+            this.labelTST.Name = "labelTST";
+            this.labelTST.Size = new System.Drawing.Size(31, 13);
+            this.labelTST.TabIndex = 2;
+            this.labelTST.Text = "TST:";
             // 
-            // label2
+            // labelTSTVal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(355, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
+            this.labelTSTVal.AutoSize = true;
+            this.labelTSTVal.Location = new System.Drawing.Point(192, 31);
+            this.labelTSTVal.Name = "labelTSTVal";
+            this.labelTSTVal.Size = new System.Drawing.Size(49, 13);
+            this.labelTSTVal.TabIndex = 3;
+            this.labelTSTVal.Text = "TST Val:";
             // 
-            // button1
+            // btnWczytajTestowy
             // 
-            this.button1.Location = new System.Drawing.Point(55, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnWczytajTestowy.Location = new System.Drawing.Point(10, 28);
+            this.btnWczytajTestowy.Name = "btnWczytajTestowy";
+            this.btnWczytajTestowy.Size = new System.Drawing.Size(190, 36);
+            this.btnWczytajTestowy.TabIndex = 4;
+            this.btnWczytajTestowy.Text = "Wczytaj system testowy";
+            this.btnWczytajTestowy.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnWczytajTreningowy
             // 
-            this.button2.Location = new System.Drawing.Point(55, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnWczytajTreningowy.Location = new System.Drawing.Point(11, 70);
+            this.btnWczytajTreningowy.Name = "btnWczytajTreningowy";
+            this.btnWczytajTreningowy.Size = new System.Drawing.Size(190, 36);
+            this.btnWczytajTreningowy.TabIndex = 5;
+            this.btnWczytajTreningowy.Text = "Wczytaj system treningowy";
+            this.btnWczytajTreningowy.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnWczytajWalidacyjny
             // 
-            this.button3.Location = new System.Drawing.Point(55, 77);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnWczytajWalidacyjny.Location = new System.Drawing.Point(11, 112);
+            this.btnWczytajWalidacyjny.Name = "btnWczytajWalidacyjny";
+            this.btnWczytajWalidacyjny.Size = new System.Drawing.Size(190, 36);
+            this.btnWczytajWalidacyjny.TabIndex = 6;
+            this.btnWczytajWalidacyjny.Text = "Wczytaj system walidacyjny";
+            this.btnWczytajWalidacyjny.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Location = new System.Drawing.Point(548, 54);
+            this.groupBox1.Controls.Add(this.btnWczytajTestowy);
+            this.groupBox1.Controls.Add(this.btnWczytajWalidacyjny);
+            this.groupBox1.Controls.Add(this.btnWczytajTreningowy);
+            this.groupBox1.Location = new System.Drawing.Point(423, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(207, 160);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "1";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(548, 218);
+            this.groupBox2.Controls.Add(this.btnGeneruj);
+            this.groupBox2.Controls.Add(this.cBoxK);
+            this.groupBox2.Controls.Add(this.labelCBoxK);
+            this.groupBox2.Controls.Add(this.labelCBoxMetryka);
+            this.groupBox2.Controls.Add(this.cBoxMetryka);
+            this.groupBox2.Location = new System.Drawing.Point(423, 195);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 206);
+            this.groupBox2.Size = new System.Drawing.Size(207, 206);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "2";
             // 
-            // comboBox1
+            // btnGeneruj
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.btnGeneruj.Location = new System.Drawing.Point(11, 134);
+            this.btnGeneruj.Name = "btnGeneruj";
+            this.btnGeneruj.Size = new System.Drawing.Size(190, 36);
+            this.btnGeneruj.TabIndex = 4;
+            this.btnGeneruj.Text = "Generuj";
+            this.btnGeneruj.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // cBoxK
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.cBoxK.FormattingEnabled = true;
+            this.cBoxK.Location = new System.Drawing.Point(11, 98);
+            this.cBoxK.Name = "cBoxK";
+            this.cBoxK.Size = new System.Drawing.Size(55, 21);
+            this.cBoxK.TabIndex = 3;
             // 
-            // label4
+            // labelCBoxK
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.labelCBoxK.AutoSize = true;
+            this.labelCBoxK.Location = new System.Drawing.Point(8, 82);
+            this.labelCBoxK.Name = "labelCBoxK";
+            this.labelCBoxK.Size = new System.Drawing.Size(58, 13);
+            this.labelCBoxK.TabIndex = 2;
+            this.labelCBoxK.Text = "Wybierz K:";
             // 
-            // comboBox2
+            // labelCBoxMetryka
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(7, 136);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 3;
+            this.labelCBoxMetryka.AutoSize = true;
+            this.labelCBoxMetryka.Location = new System.Drawing.Point(8, 25);
+            this.labelCBoxMetryka.Name = "labelCBoxMetryka";
+            this.labelCBoxMetryka.Size = new System.Drawing.Size(88, 13);
+            this.labelCBoxMetryka.TabIndex = 1;
+            this.labelCBoxMetryka.Text = "Wybierz metrykę:";
             // 
-            // button4
+            // cBoxMetryka
             // 
-            this.button4.Location = new System.Drawing.Point(10, 164);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.cBoxMetryka.FormattingEnabled = true;
+            this.cBoxMetryka.Location = new System.Drawing.Point(11, 41);
+            this.cBoxMetryka.Name = "cBoxMetryka";
+            this.cBoxMetryka.Size = new System.Drawing.Size(189, 21);
+            this.cBoxMetryka.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(673, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.labelTSTVal);
+            this.Controls.Add(this.labelTST);
+            this.Controls.Add(this.listBoxTSTVal);
+            this.Controls.Add(this.listBoxTST);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Algorytm genetyczny";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -199,20 +199,20 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBoxTST;
+        private System.Windows.Forms.ListBox listBoxTSTVal;
+        private System.Windows.Forms.Label labelTST;
+        private System.Windows.Forms.Label labelTSTVal;
+        private System.Windows.Forms.Button btnWczytajTestowy;
+        private System.Windows.Forms.Button btnWczytajTreningowy;
+        private System.Windows.Forms.Button btnWczytajWalidacyjny;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnGeneruj;
+        private System.Windows.Forms.ComboBox cBoxK;
+        private System.Windows.Forms.Label labelCBoxK;
+        private System.Windows.Forms.Label labelCBoxMetryka;
+        private System.Windows.Forms.ComboBox cBoxMetryka;
     }
 }
 
