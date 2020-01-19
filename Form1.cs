@@ -35,7 +35,7 @@ namespace GeneticAlgorithm
 
         private Dictionary<List<int>, int> openFile() 
         {
-            Dictionary<List<int>, int> fileAsDictionary;
+            Dictionary<List<int>, int> fileAsDictionary = new Dictionary<List<int>, int>();
 
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
@@ -48,14 +48,15 @@ namespace GeneticAlgorithm
                     foreach (string line in text)
                     {
                         int stringLength = line.Length;
-                        List<string> dictionaryValueList = new List<string>();
+                        string[] splitedLine = line.Split(' ');
+                        List<int> dictionaryValueList = new List<int>();
                         //podzielic linie na stringi i ostatni zapisac jako decyzje a reszte jako liste stringow
                         for (int i = 0; i < stringLength-1; i++)
                         {
-
+                            dictionaryValueList.Add(Convert.ToInt32(splitedLine[i]));
                         }
+                        fileAsDictionary.Add(dictionaryValueList, Convert.ToInt32(splitedLine[stringLength]));
                     }
-
                 }
                 catch (IOException)
                 {
