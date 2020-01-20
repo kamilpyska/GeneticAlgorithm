@@ -47,15 +47,14 @@ namespace GeneticAlgorithm
                     
                     foreach (string line in text)
                     {
-                        int stringLength = line.Length;
                         string[] splitedLine = line.Split(' ');
                         List<int> dictionaryValueList = new List<int>();
-                        //podzielic linie na stringi i ostatni zapisac jako decyzje a reszte jako liste stringow
-                        for (int i = 0; i < stringLength-1; i++)
+
+                        for (int i = 0; i < splitedLine.Length -1; i++)
                         {
                             dictionaryValueList.Add(Convert.ToInt32(splitedLine[i]));
                         }
-                        fileAsDictionary.Add(dictionaryValueList, Convert.ToInt32(splitedLine[stringLength]));
+                        fileAsDictionary.Add(dictionaryValueList, Convert.ToInt32(splitedLine[line.Length-1]));
                     }
                 }
                 catch (IOException)
