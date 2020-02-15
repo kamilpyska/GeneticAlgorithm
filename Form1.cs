@@ -13,32 +13,34 @@ namespace GeneticAlgorithm
 {
     public partial class Form1 : Form
     {
+        Dictionary<List<int>, int> tstDictionary = new Dictionary<List<int>, int>();
+        Dictionary<List<int>, int> trnDictionary = new Dictionary<List<int>, int>();
+        Dictionary<List<int>, int> valDictionary = new Dictionary<List<int>, int>();
+
+
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void btnWczytajTestowy_Click(object sender, EventArgs e)
+        private void btnReadTestSystem_Click(object sender, EventArgs e)
         {
-
+            tstDictionary = openFileAndReturnItAsDictionary();
         }
-
-        private void btnWczytajTreningowy_Click(object sender, EventArgs e)
+        private void btnReadTrainingSystem_Click(object sender, EventArgs e)
         {
-
+            trnDictionary = openFileAndReturnItAsDictionary();
         }
-
         private void btnReadValidationSystem_Click(object sender, EventArgs e)
         {
-
+            valDictionary = openFileAndReturnItAsDictionary();
         }
 
-        private Dictionary<List<int>, int> openFile() 
+        private Dictionary<List<int>, int> openFileAndReturnItAsDictionary() 
         {
             Dictionary<List<int>, int> fileAsDictionary = new Dictionary<List<int>, int>();
 
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
             {
                 string file = openFileDialog1.FileName;
                 try
@@ -60,11 +62,11 @@ namespace GeneticAlgorithm
                 catch (IOException)
                 {
                 }
-
-                
             }
             return fileAsDictionary;
         }
+
+
     }
 
 

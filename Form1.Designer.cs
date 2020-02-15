@@ -32,8 +32,8 @@
             this.listBoxTSTVal = new System.Windows.Forms.ListBox();
             this.labelTST = new System.Windows.Forms.Label();
             this.labelTSTVal = new System.Windows.Forms.Label();
-            this.btnWczytajTestowy = new System.Windows.Forms.Button();
-            this.btnWczytajTreningowy = new System.Windows.Forms.Button();
+            this.btnReadTestSystem = new System.Windows.Forms.Button();
+            this.btnReadTrainingSystem = new System.Windows.Forms.Button();
             this.btnReadValidationSystem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -81,25 +81,25 @@
             this.labelTSTVal.TabIndex = 3;
             this.labelTSTVal.Text = "TST Val:";
             // 
-            // btnWczytajTestowy
+            // btnReadTestSystem
             // 
-            this.btnWczytajTestowy.Location = new System.Drawing.Point(10, 28);
-            this.btnWczytajTestowy.Name = "btnWczytajTestowy";
-            this.btnWczytajTestowy.Size = new System.Drawing.Size(190, 36);
-            this.btnWczytajTestowy.TabIndex = 4;
-            this.btnWczytajTestowy.Text = "Wczytaj system testowy";
-            this.btnWczytajTestowy.UseVisualStyleBackColor = true;
-            this.btnWczytajTestowy.Click += new System.EventHandler(this.btnWczytajTestowy_Click);
+            this.btnReadTestSystem.Location = new System.Drawing.Point(10, 28);
+            this.btnReadTestSystem.Name = "btnReadTestSystem";
+            this.btnReadTestSystem.Size = new System.Drawing.Size(190, 36);
+            this.btnReadTestSystem.TabIndex = 4;
+            this.btnReadTestSystem.Text = "Wczytaj system testowy";
+            this.btnReadTestSystem.UseVisualStyleBackColor = true;
+            this.btnReadTestSystem.Click += new System.EventHandler(this.btnReadTestSystem_Click);
             // 
-            // btnWczytajTreningowy
+            // btnReadTrainingSystem
             // 
-            this.btnWczytajTreningowy.Location = new System.Drawing.Point(11, 70);
-            this.btnWczytajTreningowy.Name = "btnWczytajTreningowy";
-            this.btnWczytajTreningowy.Size = new System.Drawing.Size(190, 36);
-            this.btnWczytajTreningowy.TabIndex = 5;
-            this.btnWczytajTreningowy.Text = "Wczytaj system treningowy";
-            this.btnWczytajTreningowy.UseVisualStyleBackColor = true;
-            this.btnWczytajTreningowy.Click += new System.EventHandler(this.btnWczytajTreningowy_Click);
+            this.btnReadTrainingSystem.Location = new System.Drawing.Point(11, 70);
+            this.btnReadTrainingSystem.Name = "btnReadTrainingSystem";
+            this.btnReadTrainingSystem.Size = new System.Drawing.Size(190, 36);
+            this.btnReadTrainingSystem.TabIndex = 5;
+            this.btnReadTrainingSystem.Text = "Wczytaj system treningowy";
+            this.btnReadTrainingSystem.UseVisualStyleBackColor = true;
+            this.btnReadTrainingSystem.Click += new System.EventHandler(this.btnReadTrainingSystem_Click);
             // 
             // btnReadValidationSystem
             // 
@@ -113,9 +113,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnWczytajTestowy);
+            this.groupBox1.Controls.Add(this.btnReadTestSystem);
             this.groupBox1.Controls.Add(this.btnReadValidationSystem);
-            this.groupBox1.Controls.Add(this.btnWczytajTreningowy);
+            this.groupBox1.Controls.Add(this.btnReadTrainingSystem);
             this.groupBox1.Location = new System.Drawing.Point(423, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(207, 160);
@@ -213,8 +213,8 @@
         private System.Windows.Forms.ListBox listBoxTSTVal;
         private System.Windows.Forms.Label labelTST;
         private System.Windows.Forms.Label labelTSTVal;
-        private System.Windows.Forms.Button btnWczytajTestowy;
-        private System.Windows.Forms.Button btnWczytajTreningowy;
+        private System.Windows.Forms.Button btnReadTestSystem;
+        private System.Windows.Forms.Button btnReadTrainingSystem;
         private System.Windows.Forms.Button btnReadValidationSystem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
