@@ -8,11 +8,16 @@ namespace GeneticAlgorithm
 {
     class Algorithm
     {
-        private int EuclideanMtric()
+        private double EuclideanMtric(List<int> x,List<int>y)
         {
-            int value=0;
+            double result =0;
 
-            return value;
+            for (int i = 0; i < x.Count; i++)
+            {
+                result = Math.Sqrt(Math.Pow(x[i] - y[i],2));
+            }
+
+            return result;
         }
     }
 }
