@@ -29,5 +29,29 @@ namespace GeneticAlgorithm
             }
             return result;
         }
+
+        private double ChebyshevMetric(List<int> x, List<int> y)
+        {
+            double result = 0;
+            List<double> helper = new List<double>();
+
+            for (int i = 0; i < x.Count; i++)
+            {
+                helper.Add(result = Math.Abs(x[i] - y[i]));
+            }
+
+            return helper.Max();
+        }
+
+        private double ManhattanMetric(List<int> x, List<int> y)
+        {
+            double result = 0;
+            for (int i = 0; i < x.Count; i++)
+            {
+                result = Math.Abs((x[i] - y[i]));
+            }
+            return result;
+        }
+
     }
 }
