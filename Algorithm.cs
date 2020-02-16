@@ -52,6 +52,20 @@ namespace GeneticAlgorithm
             }
             return result;
         }
+        private double PearsonCorrelationCoefficientList(List<int> x, List<int> y)
+        {
+            double result = 0;
+            double averageX = 0;
+            double averageY = 0;
 
+            for (int i = 0; i < x.Count; i++) //x.Count() = y.Count()
+            {
+                averageX = +x[i];
+                averageY = +y[i];
+            }
+            averageX =averageX / x.Count();
+            averageY = averageY / y.Count();
+            return result;
+        }
     }
 }
