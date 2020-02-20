@@ -14,10 +14,10 @@ namespace GeneticAlgorithm
 
             for (int i = 0; i < x.Count; i++)
             {
-                result = Math.Sqrt(Math.Pow(x[i] - y[i], 2));
+                result += Math.Pow(x[i] - y[i], 2);
             }
 
-            return result;
+            return Math.Sqrt(result);
         }
 
         private double CanberrasMetric(List<int> x, List<int> y)
@@ -25,7 +25,7 @@ namespace GeneticAlgorithm
             double result = 0;
             for (int i = 0; i < x.Count; i++)
             {
-                result = Math.Abs((x[i] - y[i]) / (x[i] + y[i]));
+                result += Math.Abs((x[i] - y[i]) / (x[i] + y[i]));
             }
             return result;
         }
@@ -48,7 +48,7 @@ namespace GeneticAlgorithm
             double result = 0;
             for (int i = 0; i < x.Count; i++)
             {
-                result = Math.Abs((x[i] - y[i]));
+                result += Math.Abs((x[i] - y[i]));
             }
             return result;
         }
@@ -57,6 +57,8 @@ namespace GeneticAlgorithm
             double result = 0;
             double averageX = 0;
             double averageY = 0;
+            double holder1 = 0;
+            double holder2 = 0;
 
             for (int i = 0; i < x.Count; i++) //x.Count() = y.Count()
             {
@@ -65,7 +67,14 @@ namespace GeneticAlgorithm
             }
             averageX =averageX / x.Count();
             averageY = averageY / y.Count();
-            return result;
+
+            for (int i = 0; i < x.Count(); i++)
+            {
+                holder1 += Math.Pow(x[i] - averageX,2);
+            }
+            holder1 /= x.Count();
+
+            return result/x.Count();
         }
     }
 }
