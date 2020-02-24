@@ -59,20 +59,50 @@ namespace GeneticAlgorithm
             double averageY = 0;
             double holder1 = 0;
             double holder2 = 0;
+            double holder3 = 0;
+            double holder4 = 0;
+            double holder5 = 0;
 
             for (int i = 0; i < x.Count; i++) //x.Count() = y.Count()
             {
                 averageX = +x[i];
                 averageY = +y[i];
             }
-            averageX =averageX / x.Count();
-            averageY = averageY / y.Count();
+            averageX /= x.Count();
+            averageY /= y.Count();
 
-            for (int i = 0; i < x.Count(); i++)
+            
+            for (int i = 0; i < x.Count; i++)
             {
-                holder1 += Math.Pow(x[i] - averageX,2);
+                //licznik 1 rownanie
+                holder1 = x[i] - averageX;
+
+                //mianownik 1 rownanie
+                for (int j = 0; i < x.Count; i++)
+                {
+                    holder2 += Math.Pow(x[j] - averageX, 2);
+                }
+
+                holder2 /= x.Count();
+                holder2 = Math.Sqrt(holder2);
+
+                //licznik 2 rownanie
+                holder3 = y[i] - averageY;
+
+                //mianownik 2 rownanie
+                for (int j = 0; i < y.Count; i++)
+                {
+                    holder4 += Math.Pow(y[j] - averageY, 2);
+                }
+
+                holder4 /= y.Count();
+                holder4 = Math.Sqrt(holder4);
+
+                holder5 += (holder1 / holder2) * (holder3 / holder4);
             }
-            holder1 /= x.Count();
+            holder5 /= x.Count;
+
+
 
             return result/x.Count();
         }
