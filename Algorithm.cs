@@ -54,12 +54,12 @@ namespace GeneticAlgorithm
         }
         private double PearsonCorrelationCoefficientList(List<int> x, List<int> y)
         {
-            double result = 0;
+            double result;
             double averageX = 0;
             double averageY = 0;
-            double holder1 = 0;
+            double holder1;
             double holder2 = 0;
-            double holder3 = 0;
+            double holder3;
             double holder4 = 0;
             double holder5 = 0;
 
@@ -102,9 +102,9 @@ namespace GeneticAlgorithm
             }
             holder5 /= x.Count;
 
+            result = 1 - Math.Abs(holder5);
 
-
-            return result/x.Count();
+            return result;
         }
     }
 }
