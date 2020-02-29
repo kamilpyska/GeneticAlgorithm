@@ -17,6 +17,8 @@ namespace GeneticAlgorithm
         Dictionary<List<int>, int> trnDictionary = new Dictionary<List<int>, int>();
         Dictionary<List<int>, int> valDictionary = new Dictionary<List<int>, int>();
 
+        Algorithm algorithm = new Algorithm();
+        
 
         public Form1()
         {

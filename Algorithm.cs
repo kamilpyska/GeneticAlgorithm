@@ -8,7 +8,9 @@ namespace GeneticAlgorithm
 {
     class Algorithm
     {
-        private double EuclideanMetric(List<int> x, List<int> y)
+        public delegate double Metric(List<int> x, List<int> y);
+
+        public double EuclideanMetric(List<int> x, List<int> y)
         {
             double result = 0;
 
@@ -20,7 +22,7 @@ namespace GeneticAlgorithm
             return Math.Sqrt(result);
         }
 
-        private double CanberrasMetric(List<int> x, List<int> y)
+        public double CanberrasMetric(List<int> x, List<int> y)
         {
             double result = 0;
             for (int i = 0; i < x.Count; i++)
@@ -30,7 +32,7 @@ namespace GeneticAlgorithm
             return result;
         }
 
-        private double ChebyshevMetric(List<int> x, List<int> y)
+        public double ChebyshevMetric(List<int> x, List<int> y)
         {
             double result = 0;
             List<double> helper = new List<double>();
@@ -43,7 +45,7 @@ namespace GeneticAlgorithm
             return helper.Max();
         }
 
-        private double ManhattanMetric(List<int> x, List<int> y)
+        public double ManhattanMetric(List<int> x, List<int> y)
         {
             double result = 0;
             for (int i = 0; i < x.Count; i++)
@@ -52,7 +54,7 @@ namespace GeneticAlgorithm
             }
             return result;
         }
-        private double PearsonCorrelationCoefficientList(List<int> x, List<int> y)
+        public double PearsonCorrelationCoefficientList(List<int> x, List<int> y)
         {
             double result;
             double averageX = 0;
@@ -105,6 +107,32 @@ namespace GeneticAlgorithm
             result = 1 - Math.Abs(holder5);
 
             return result;
+        }
+    
+        public void beginComputing(string metricName)
+        {
+            Metric metric;
+
+            if (metricName == "CanberrasMetric")
+            {
+                metric = new Metric(CanberrasMetric);
+            }
+            else if (metricName == "ChebyshevMetric")
+            {
+                metric = new Metric(ChebyshevMetric);
+            }
+            else if (metricName == "ManhattanMetric") 
+            {
+                metric = new Metric(ManhattanMetric);
+            }
+            else if (metricName == "PearsonCorrelationCoefficientList")
+            {
+                metric = new Metric(PearsonCorrelationCoefficientList);
+            }
+            else
+            {
+                metric = new Metric(EuclideanMetric);
+            }
         }
     }
 }
