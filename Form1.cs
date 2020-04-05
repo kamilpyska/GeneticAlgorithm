@@ -26,18 +26,18 @@ namespace GeneticAlgorithm
         }
         private void btnReadTestSystem_Click(object sender, EventArgs e)
         {
-            tstDictionary = openFileAndReturnItAsDictionary();
+            tstDictionary = openFileAsDictionary();
         }
         private void btnReadTrainingSystem_Click(object sender, EventArgs e)
         {
-            trnDictionary = openFileAndReturnItAsDictionary();
+            trnDictionary = openFileAsDictionary();
         }
         private void btnReadValidationSystem_Click(object sender, EventArgs e)
         {
-            valDictionary = openFileAndReturnItAsDictionary();
+            valDictionary = openFileAsDictionary();
         }
 
-        private Dictionary<List<int>, int> openFileAndReturnItAsDictionary() 
+        private Dictionary<List<int>, int> openFileAsDictionary() 
         {
             Dictionary<List<int>, int> fileAsDictionary = new Dictionary<List<int>, int>();
 
@@ -45,20 +45,23 @@ namespace GeneticAlgorithm
             if (result == DialogResult.OK)
             {
                 string file = openFileDialog1.FileName;
+
                 try
                 {
-                    string[] text = File.ReadAllLines(file); 
+                    string[] text = File.ReadAllLines(file);
                     
                     foreach (string line in text)
                     {
                         string[] splitedLine = line.Split(' ');
                         List<int> dictionaryValueList = new List<int>();
+                        int decisionC = 0;
 
-                        for (int i = 0; i < splitedLine.Length -1; i++)
+                        for (int i = 0; i < splitedLine.Length-1; i++) //all attributes without the last
                         {
                             dictionaryValueList.Add(Convert.ToInt32(splitedLine[i]));
                         }
-                        fileAsDictionary.Add(dictionaryValueList, Convert.ToInt32(splitedLine[line.Length-1]));
+                        decisionC = Convert.ToInt32(splitedLine[splitedLine.Length - 1]); //the last attribute is the decision C
+                        fileAsDictionary.Add(dictionaryValueList, decisionC);
                     }
                 }
                 catch (IOException)

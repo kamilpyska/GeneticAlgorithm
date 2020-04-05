@@ -34,7 +34,6 @@
             this.labelTSTVal = new System.Windows.Forms.Label();
             this.btnReadTestSystem = new System.Windows.Forms.Button();
             this.btnReadTrainingSystem = new System.Windows.Forms.Button();
-            this.btnReadValidationSystem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnGeneruj = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.labelCBoxMetryka = new System.Windows.Forms.Label();
             this.cBoxMetryka = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnReadValidationSystem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -100,16 +100,6 @@
             this.btnReadTrainingSystem.Text = "Wczytaj system treningowy";
             this.btnReadTrainingSystem.UseVisualStyleBackColor = true;
             this.btnReadTrainingSystem.Click += new System.EventHandler(this.btnReadTrainingSystem_Click);
-            // 
-            // btnReadValidationSystem
-            // 
-            this.btnReadValidationSystem.Location = new System.Drawing.Point(11, 112);
-            this.btnReadValidationSystem.Name = "btnReadValidationSystem";
-            this.btnReadValidationSystem.Size = new System.Drawing.Size(190, 36);
-            this.btnReadValidationSystem.TabIndex = 6;
-            this.btnReadValidationSystem.Text = "Wczytaj system walidacyjny";
-            this.btnReadValidationSystem.UseVisualStyleBackColor = true;
-            this.btnReadValidationSystem.Click += new System.EventHandler(this.btnReadValidationSystem_Click);
             // 
             // groupBox1
             // 
@@ -182,9 +172,17 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.DefaultExt = "\"txt\"";
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "\"txt files (*.txt)|*.txt\"";
+            // 
+            // btnReadValidationSystem
+            // 
+            this.btnReadValidationSystem.Location = new System.Drawing.Point(11, 112);
+            this.btnReadValidationSystem.Name = "btnReadValidationSystem";
+            this.btnReadValidationSystem.Size = new System.Drawing.Size(190, 36);
+            this.btnReadValidationSystem.TabIndex = 6;
+            this.btnReadValidationSystem.Text = "Wczytaj system walidacyjny";
+            this.btnReadValidationSystem.UseVisualStyleBackColor = true;
+            this.btnReadValidationSystem.Click += new System.EventHandler(this.btnReadValidationSystem_Click);
             // 
             // Form1
             // 
@@ -215,7 +213,6 @@
         private System.Windows.Forms.Label labelTSTVal;
         private System.Windows.Forms.Button btnReadTestSystem;
         private System.Windows.Forms.Button btnReadTrainingSystem;
-        private System.Windows.Forms.Button btnReadValidationSystem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnGeneruj;
@@ -224,6 +221,7 @@
         private System.Windows.Forms.Label labelCBoxMetryka;
         private System.Windows.Forms.ComboBox cBoxMetryka;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnReadValidationSystem;
     }
 }
 
