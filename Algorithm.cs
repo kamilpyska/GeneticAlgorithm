@@ -134,5 +134,16 @@ namespace GeneticAlgorithm
                 metric = new Metric(EuclideanMetric);
             }
         }
+
+        private void classifyObjects(Dictionary<List<int>, int> dictionaryX, Dictionary<List<int>, int>dictionaryY, Metric metric)
+        {
+            foreach (KeyValuePair<List<int>,int> pairX in dictionaryX)
+            {
+                foreach (KeyValuePair<List<int>,int> pairY in dictionaryY)
+                {
+                    metric(pairX.Key, pairY.Key);
+                }
+            }
+        }
     }
 }

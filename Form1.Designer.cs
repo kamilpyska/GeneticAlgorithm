@@ -35,6 +35,7 @@
             this.btnReadTestSystem = new System.Windows.Forms.Button();
             this.btnReadTrainingSystem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReadValidationSystem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnGeneruj = new System.Windows.Forms.Button();
             this.cBoxK = new System.Windows.Forms.ComboBox();
@@ -42,7 +43,6 @@
             this.labelCBoxMetryka = new System.Windows.Forms.Label();
             this.cBoxMetryka = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnReadValidationSystem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "1";
             // 
+            // btnReadValidationSystem
+            // 
+            this.btnReadValidationSystem.Location = new System.Drawing.Point(11, 112);
+            this.btnReadValidationSystem.Name = "btnReadValidationSystem";
+            this.btnReadValidationSystem.Size = new System.Drawing.Size(190, 36);
+            this.btnReadValidationSystem.TabIndex = 6;
+            this.btnReadValidationSystem.Text = "Wczytaj system walidacyjny";
+            this.btnReadValidationSystem.UseVisualStyleBackColor = true;
+            this.btnReadValidationSystem.Click += new System.EventHandler(this.btnReadValidationSystem_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnGeneruj);
@@ -139,6 +149,12 @@
             // cBoxK
             // 
             this.cBoxK.FormattingEnabled = true;
+            this.cBoxK.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.cBoxK.Location = new System.Drawing.Point(11, 98);
             this.cBoxK.Name = "cBoxK";
             this.cBoxK.Size = new System.Drawing.Size(55, 21);
@@ -165,6 +181,12 @@
             // cBoxMetryka
             // 
             this.cBoxMetryka.FormattingEnabled = true;
+            this.cBoxMetryka.Items.AddRange(new object[] {
+            "Euklidesa",
+            "Canberra",
+            "Czebyszewa",
+            "Manhattan",
+            "Współczynnik Pearsona"});
             this.cBoxMetryka.Location = new System.Drawing.Point(11, 41);
             this.cBoxMetryka.Name = "cBoxMetryka";
             this.cBoxMetryka.Size = new System.Drawing.Size(189, 21);
@@ -173,16 +195,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnReadValidationSystem
-            // 
-            this.btnReadValidationSystem.Location = new System.Drawing.Point(11, 112);
-            this.btnReadValidationSystem.Name = "btnReadValidationSystem";
-            this.btnReadValidationSystem.Size = new System.Drawing.Size(190, 36);
-            this.btnReadValidationSystem.TabIndex = 6;
-            this.btnReadValidationSystem.Text = "Wczytaj system walidacyjny";
-            this.btnReadValidationSystem.UseVisualStyleBackColor = true;
-            this.btnReadValidationSystem.Click += new System.EventHandler(this.btnReadValidationSystem_Click);
             // 
             // Form1
             // 
