@@ -133,6 +133,8 @@ namespace GeneticAlgorithm
             {
                 metric = new Metric(EuclideanMetric);
             }
+
+
         }
 
         private void classifyObjects(Dictionary<List<int>, int> dictionaryX, Dictionary<List<int>, int>dictionaryY, Metric metric)

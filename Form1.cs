@@ -31,6 +31,7 @@ namespace GeneticAlgorithm
         private void btnReadTrainingSystem_Click(object sender, EventArgs e)
         {
             trnDictionary = openFileAsDictionary();
+            setCBoxKItems(trnDictionary);
         }
         private void btnReadValidationSystem_Click(object sender, EventArgs e)
         {
@@ -69,6 +70,34 @@ namespace GeneticAlgorithm
                 }
             }
             return fileAsDictionary;
+        }
+        private void setCBoxKItems(Dictionary<List<int>,int> trnDict)
+        {
+            List<int> decisionsList = new List<int>();
+
+            foreach (int decision in trnDict.Values)
+            {
+                decisionsList.Add(decision);
+            }
+
+            Dictionary<int, int> howManyOfEachDecisionDict = new Dictionary<int, int>();
+            int decisionsCounter;
+
+            foreach (int uniqueDecision in decisionsList.Distinct())
+            {
+                decisionsCounter = 0;
+                foreach (int decision in decisionsList)
+                {
+                    if (decision==uniqueDecision)
+                    {
+                        decisionsCounter++;
+                    }
+                }
+                howManyOfEachDecisionDict.Add(uniqueDecision, decisionsCounter);
+            }
+            
+
+            
         }
 
 
